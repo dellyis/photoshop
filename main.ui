@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>878</width>
-    <height>612</height>
+    <width>900</width>
+    <height>615</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>900</width>
+    <height>615</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -22,22 +28,114 @@ color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>100</y>
-      <width>321</width>
-      <height>501</height>
+      <y>20</y>
+      <width>320</width>
+      <height>540</height>
      </rect>
     </property>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+	selection-background-color: #5865F2;
+	border-bottom-color: rgb(255, 255, 255);
+}
+</string>
+    </property>
     <property name="currentIndex">
      <number>0</number>
     </property>
-    <widget class="QWidget" name="tab">
+    <widget class="QWidget" name="file_tab">
      <attribute name="title">
-      <string>Каналы</string>
+      <string>Файл</string>
      </attribute>
-     <widget class="QFrame" name="frame">
+     <widget class="QFrame" name="download_file">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>370</y>
+        <width>301</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(47, 47, 47);
+border-radius: 25px;
+border: 1px solid #fff;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLineEdit" name="img_link">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>261</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+	border: 1px solid rgb(255, 255, 255);
+	border-radius: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+QLineEdit:hover, QLineEdit:focus {
+	border: 1px solid #5865F2;
+	border-radius: 10px;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>Ссылка на изображение</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="img_dl">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>70</y>
+         <width>261</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: solid #fff;
+	border-width: 1px;
+	border-radius: 10px;
+	background-color: rgb(75, 75, 75);
+}
+
+QPushButton:hover {
+	background-color: rgb(65, 65, 65);
+	border-color: #5865F2;
+}</string>
+       </property>
+       <property name="text">
+        <string>Загрузить</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="open_file">
       <property name="enabled">
        <bool>true</bool>
       </property>
@@ -45,7 +143,208 @@ color: rgb(255, 255, 255);</string>
        <rect>
         <x>10</x>
         <y>10</y>
-        <width>291</width>
+        <width>301</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(47, 47, 47);
+border-radius: 25px;
+border: 1px solid #fff;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="open">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>261</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: solid #fff;
+	border-width: 1px;
+	border-radius: 10px;
+	background-color: rgb(75, 75, 75);
+}
+
+QPushButton:hover {
+	background-color: rgb(65, 65, 65);
+	border-color: #5865F2;
+}</string>
+       </property>
+       <property name="text">
+        <string>Открыть</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="close">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>70</y>
+         <width>261</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: solid #fff;
+	border-width: 1px;
+	border-radius: 10px;
+	background-color: rgb(75, 75, 75);
+}
+
+QPushButton:hover {
+	background-color: rgb(65, 65, 65);
+	border-color: #5865F2;
+}</string>
+       </property>
+       <property name="text">
+        <string>Закрыть</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="save_file">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>160</y>
+        <width>301</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(47, 47, 47);
+border-radius: 25px;
+border: 1px solid #fff;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="save">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>261</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: solid #fff;
+	border-width: 1px;
+	border-radius: 10px;
+	background-color: rgb(75, 75, 75);
+}
+
+QPushButton:hover {
+	background-color: rgb(65, 65, 65);
+	border-color: #5865F2;
+}</string>
+       </property>
+       <property name="text">
+        <string>Сохранить</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="save_as">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>130</y>
+         <width>261</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: solid #fff;
+	border-width: 1px;
+	border-radius: 10px;
+	background-color: rgb(75, 75, 75);
+}
+
+QPushButton:hover {
+	background-color: rgb(65, 65, 65);
+	border-color: #5865F2;
+}</string>
+       </property>
+       <property name="text">
+        <string>Сохранить как</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="new_name">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>80</y>
+         <width>261</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+	border: 1px solid rgb(255, 255, 255);
+	border-radius: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+QLineEdit:hover, QLineEdit:focus {
+	border: 1px solid #5865F2;
+	border-radius: 10px;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>Новое название изображения</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="channels_tab">
+     <attribute name="title">
+      <string>Каналы</string>
+     </attribute>
+     <widget class="QFrame" name="channels">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>301</width>
         <height>231</height>
        </rect>
       </property>
@@ -54,7 +353,8 @@ color: rgb(255, 255, 255);</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(47, 47, 47);
-border-radius: 35px;</string>
+border-radius: 25px;
+border: 1px solid #fff;</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -62,12 +362,12 @@ border-radius: 35px;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QFrame" name="frame_2">
+      <widget class="QFrame" name="red_channel">
        <property name="geometry">
         <rect>
          <x>20</x>
          <y>70</y>
-         <width>251</width>
+         <width>261</width>
          <height>41</height>
         </rect>
        </property>
@@ -85,18 +385,29 @@ border-radius: 10px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QSlider" name="horizontalSlider">
+       <widget class="QSlider" name="red_slider">
         <property name="geometry">
          <rect>
           <x>40</x>
           <y>10</y>
-          <width>201</width>
+          <width>211</width>
           <height>20</height>
          </rect>
         </property>
+        <property name="cursor">
+         <cursorShape>SizeHorCursor</cursorShape>
+        </property>
         <property name="styleSheet">
-         <string notr="true">border: none;
-selection-background-color: rgb(255, 0, 0);</string>
+         <string notr="true">QSlider {
+	border: none;
+	selection-background-color: rgb(255, 0, 0);
+}
+
+QSlider:handle:hover, QSlider:handle:focus {
+    background: rgb(47, 47, 47);
+    border: 1px solid rgb(255, 0, 0);
+	border-radius: 10px;
+}</string>
         </property>
         <property name="maximum">
          <number>255</number>
@@ -108,7 +419,7 @@ selection-background-color: rgb(255, 0, 0);</string>
          <enum>Qt::Horizontal</enum>
         </property>
        </widget>
-       <widget class="QLabel" name="label">
+       <widget class="QLabel" name="red_circle">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -127,12 +438,12 @@ border-radius: 10px;
         </property>
        </widget>
       </widget>
-      <widget class="QFrame" name="frame_3">
+      <widget class="QFrame" name="green_channel">
        <property name="geometry">
         <rect>
          <x>20</x>
          <y>120</y>
-         <width>251</width>
+         <width>261</width>
          <height>41</height>
         </rect>
        </property>
@@ -150,18 +461,29 @@ border-radius: 10px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QSlider" name="horizontalSlider_4">
+       <widget class="QSlider" name="green_slider">
         <property name="geometry">
          <rect>
           <x>40</x>
           <y>10</y>
-          <width>201</width>
+          <width>211</width>
           <height>20</height>
          </rect>
         </property>
+        <property name="cursor">
+         <cursorShape>SizeHorCursor</cursorShape>
+        </property>
         <property name="styleSheet">
-         <string notr="true">border: none;
-selection-background-color: rgb(0, 255, 0);</string>
+         <string notr="true">QSlider {
+	border: none;
+	selection-background-color: rgb(0, 255, 0);
+}
+
+QSlider:handle:hover, QSlider:handle:focus {
+    background: rgb(47, 47, 47);
+    border: 1px solid rgb(0, 255, 0);
+	border-radius: 10px;
+}</string>
         </property>
         <property name="maximum">
          <number>255</number>
@@ -173,7 +495,7 @@ selection-background-color: rgb(0, 255, 0);</string>
          <enum>Qt::Horizontal</enum>
         </property>
        </widget>
-       <widget class="QLabel" name="label_4">
+       <widget class="QLabel" name="green_circle">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -192,12 +514,12 @@ border-radius: 10px;
         </property>
        </widget>
       </widget>
-      <widget class="QFrame" name="frame_4">
+      <widget class="QFrame" name="blue_channel">
        <property name="geometry">
         <rect>
          <x>20</x>
          <y>170</y>
-         <width>251</width>
+         <width>261</width>
          <height>41</height>
         </rect>
        </property>
@@ -215,18 +537,29 @@ border-radius: 10px;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QSlider" name="horizontalSlider_7">
+       <widget class="QSlider" name="blue_slider">
         <property name="geometry">
          <rect>
           <x>40</x>
           <y>10</y>
-          <width>201</width>
+          <width>211</width>
           <height>20</height>
          </rect>
         </property>
+        <property name="cursor">
+         <cursorShape>SizeHorCursor</cursorShape>
+        </property>
         <property name="styleSheet">
-         <string notr="true">border: none;
-selection-background-color: rgb(0, 0, 255);</string>
+         <string notr="true">QSlider {
+	border: none;
+	selection-background-color: rgb(0, 0, 255);
+}
+
+QSlider:handle:hover, QSlider:handle:focus {
+    background: rgb(47, 47, 47);
+    border: 1px solid rgb(0, 0, 255);
+	border-radius: 10px;
+}</string>
         </property>
         <property name="maximum">
          <number>255</number>
@@ -238,7 +571,7 @@ selection-background-color: rgb(0, 0, 255);</string>
          <enum>Qt::Horizontal</enum>
         </property>
        </widget>
-       <widget class="QLabel" name="label_7">
+       <widget class="QLabel" name="blue_circle">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -257,20 +590,30 @@ border-radius: 10px;
         </property>
        </widget>
       </widget>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="all_channels">
        <property name="geometry">
         <rect>
          <x>20</x>
-         <y>23</y>
-         <width>251</width>
+         <y>20</y>
+         <width>261</width>
          <height>41</height>
         </rect>
        </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
-        <string notr="true">border: solid #fff;
-border-width: 1px;
-border-radius: 10px;
-background-color: rgb(25, 25, 25);</string>
+        <string notr="true">QPushButton {
+	border: solid #fff;
+	border-width: 1px;
+	border-radius: 10px;
+	background-color: rgb(75, 75, 75);
+}
+
+QPushButton:hover {
+	background-color: rgb(65, 65, 65);
+	border-color: #5865F2;
+}</string>
        </property>
        <property name="text">
         <string>Все каналы</string>
@@ -279,18 +622,105 @@ background-color: rgb(25, 25, 25);</string>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
      <attribute name="title">
       <string>Фильтры</string>
      </attribute>
+     <widget class="QFrame" name="download_2">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>301</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(47, 47, 47);
+border-radius: 35px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLineEdit" name="img_link_2">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>261</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+	border: 1px solid rgb(255, 255, 255);
+	border-radius: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+QLineEdit:hover, QLineEdit:focus {
+	border: 1px solid #5865F2;
+	border-radius: 10px;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>Ссылка на изображение</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="img_dl_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>70</y>
+         <width>261</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: solid #fff;
+	border-width: 1px;
+	border-radius: 10px;
+	background-color: rgb(75, 75, 75);
+}
+
+QPushButton:hover {
+	background-color: rgb(65, 65, 65);
+	border-color: #5865F2;
+}</string>
+       </property>
+       <property name="text">
+        <string>Все каналы</string>
+       </property>
+      </widget>
+     </widget>
     </widget>
    </widget>
-   <widget class="QLabel" name="label_8">
+   <widget class="QLabel" name="img">
     <property name="geometry">
      <rect>
       <x>350</x>
-      <y>100</y>
-      <width>500</width>
-      <height>500</height>
+      <y>20</y>
+      <width>541</width>
+      <height>541</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -300,6 +730,31 @@ border-radius: 25px;</string>
     </property>
     <property name="text">
      <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="log">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>580</y>
+      <width>871</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	border: 1px solid rgb(255, 255, 255);
+	border-radius: 5px
+}</string>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>
